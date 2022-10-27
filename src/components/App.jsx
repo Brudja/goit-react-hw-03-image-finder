@@ -30,7 +30,7 @@ this.setState(prevState => ({page: prevState.page +1}))
     >
       <Searchbar onSubmit = {this.handleSearch}/>
       <ImageGallery searchNameImage = {this.state.searhValue} page={this.state.page}/>
-      <Button onAddImg={this.hendleLoadMore}/>
+      {this.state.searhValue && <Button onAddImg={this.hendleLoadMore}/>}
     </div>
   );};
 };
